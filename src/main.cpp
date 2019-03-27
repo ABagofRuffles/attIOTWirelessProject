@@ -3,12 +3,25 @@
 #include "iot_monitor.h"
 #include <unistd.h>                                                             // Needed for sleep(), usleep()
 #include "wwan_status.hpp"
+#include <ofstream>																// Added to create and edit text file
+
+using namespace std;
 
 int c;
 sysinfo  mySystem;                                                              // Get system info from MAL
 wwanInfo myWwan;                                                                // Get wwan info from MAL
 netInfo  myNetw;                                                                // Get network info from MAL
 unsigned int dbg_flag = 0;
+
+void writetofile(string data, string filename) {
+	char * writable = new char[data.size() + 1];		// creates char array
+	copy(data.begin(), data.end(), writable);			// copies string to char array
+	writable[data.size()] = '\0';						// deletes the terminating 0
+	ofstream rfile(filename, ios::app);					// sets to append to file and opens file
+	rfile.write(writable, data.size());					// adds string data to end of file
+	rfile.close();										// closes file
+	delete[] writable;									// frees the string after using it
+}
 
 int main(void) {
     // Return variables from function calls
@@ -30,6 +43,8 @@ int main(void) {
         mySystem.model=getModelID(om, sizeof(om));
     while( mySystem.model == "service is not ready");
 
+
+// add while here
     mySystem.firmVer   = getFirmwareVersion(om, sizeof(om));
     mySystem.appsVer   = getAppsVersion(om, sizeof(om));
     mySystem.malwarVer = getMALManVer(om, sizeof(om));
@@ -56,7 +71,14 @@ int main(void) {
     printf("wcdma %s\n", myNetw.wcdma.c_str());
     printf("IPv4 %s\n", mySystem.ip.c_str());
     printf("ipv6 %s\n\n", myNetw.ipv6.c_str());
-
+	
+	//Write data to text file
+	string temp;
+	while(user button == 0){
+		temp = myNetw.connType.c_str() + "\n\r" + myNetw.connState.c_str() + "\n\r" + myNetw.connTime.c_str() + "\n\r" + myNetw.provider.c_str() + "\n\r" + myNetw.radioMode.c_str() + "\n\r" + myNetw.dbTech.c_str() + "\n\r" + myNetw.roamStatus.c_str() + "\n\r" + myNetw.sigStrength.c_str() + "\n\r" + myNetw.sigLevel.c_str() + "\n\r" + myNetw.lte.c_str() + "\n\r" + myNetw.wcdma.c_str() + "\n\r" + mySystem.ip.c_str() + "\n\r" + myNetw.ipv6.c_str();  //lol what return key?!?
+		writetofile(temp, "Data/MonitorData");
+	}
+	
     return 0;
 }
 
