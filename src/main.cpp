@@ -3,7 +3,9 @@
 #include "iot_monitor.h"
 #include <unistd.h>                                                             // Needed for sleep(), usleep()
 #include "wwan_status.hpp"
-#include <ofstream>																// Added to create and edit text file
+#include <fstream>
+#include <string>
+																// Added to create and edit text file
 
 using namespace std;
 
@@ -14,7 +16,7 @@ netInfo  myNetw;                                                                
 unsigned int dbg_flag = 0;
 
 void writetofile(string data, string filename) {
-	char * writable = new char[data.size() + 1];		// creates char array
+	char* writable = new char[data.size() + 1];		// creates char array
 	copy(data.begin(), data.end(), writable);			// copies string to char array
 	writable[data.size()] = '\0';						// deletes the terminating 0
 	ofstream rfile(filename, ios::app);					// sets to append to file and opens file
@@ -43,7 +45,7 @@ int main(void) {
         mySystem.model=getModelID(om, sizeof(om));
     while( mySystem.model == "service is not ready");
 
-    string temp;
+    string info;
     for(int  i = 0; i <3; i++) {
     mySystem.firmVer   = getFirmwareVersion(om, sizeof(om));
     mySystem.appsVer   = getAppsVersion(om, sizeof(om));
@@ -73,10 +75,23 @@ int main(void) {
     printf("ipv6 %s\n\n", myNetw.ipv6.c_str());
 	
 	//Write data to text file
+	char temp[100];
+	strcpy (temp, myNetw.connType.c_str());
+	strcat (temp, myNetw.connState.c_str());
+	strcat (temp, myNetw.connTime.c_str());
+	strcat (temp, myNetw.provider.c_str());
+	strcat (temp, myNetw.radioMode.c_str());
+	strcat (temp, myNetw.dbTech.c_str());
+	strcat (temp, myNetw.roamStatus.c_str());
+	strcat (temp, myNetw.sigStrength.c_str());
+	strcat (temp, myNetw.sigLevel.c_str());
+	strcat (temp, myNetw.lte.c_str());
+	strcat (temp, myNetw.wcdma.c_str());
+	strcat (temp, mySystem.ip.c_str());
+	strcat (temp, myNetw.ipv6.c_str());
+	writetofile(temp, "data/MonitorData.txt");
+	delete[] temp;
 
-    temp = myNetw.connType.c_str() + "\n\r" + myNetw.connState.c_str() + "\n\r" + myNetw.connTime.c_str() + "\n\r" +       myNetw.provider.c_str() + "\n\r" + myNetw.radioMode.c_str() + "\n\r" + myNetw.dbTech.c_str() + "\n\r" + myNetw.roamStatus.c_str() + "\n\r" + myNetw.sigStrength.c_str() + "\n\r" + myNetw.sigLevel.c_str() + "\n\r" + myNetw.lte.c_str() + "\n\r" + myNetw.wcdma.c_str() + "\n\r" + mySystem.ip.c_str() + "\n\r" + myNetw.ipv6.c_str();  //lol what return key?!?
-		writetofile(temp, "data/MonitorData.txt");
-	}
     }
 
     return 0;
