@@ -19,7 +19,7 @@ void writetofile(string data, string filename) {
 	char* writable = new char[data.size() + 1];		// creates char array
 	copy(data.begin(), data.end(), writable);			// copies string to char array
 	writable[data.size()] = '\0';						// deletes the terminating 0
-	ofstream rfile(filename, ios::app);					// sets to append to file and opens file
+	ofstream rfile(filename.c_str(), ios::app);					// sets to append to file and opens file
 	rfile.write(writable, data.size());					// adds string data to end of file
 	rfile.close();										// closes file
 	delete[] writable;									// frees the string after using it
@@ -75,22 +75,35 @@ int main(void) {
     printf("ipv6 %s\n\n", myNetw.ipv6.c_str());
 	
 	//Write data to text file
-	char temp[100];
-	strcpy (temp, myNetw.connType.c_str());
-	strcat (temp, myNetw.connState.c_str());
-	strcat (temp, myNetw.connTime.c_str());
-	strcat (temp, myNetw.provider.c_str());
-	strcat (temp, myNetw.radioMode.c_str());
-	strcat (temp, myNetw.dbTech.c_str());
-	strcat (temp, myNetw.roamStatus.c_str());
-	strcat (temp, myNetw.sigStrength.c_str());
-	strcat (temp, myNetw.sigLevel.c_str());
-	strcat (temp, myNetw.lte.c_str());
-	strcat (temp, myNetw.wcdma.c_str());
-	strcat (temp, mySystem.ip.c_str());
-	strcat (temp, myNetw.ipv6.c_str());
-	writetofile(temp, "data/MonitorData.txt");
-	delete[] temp;
+
+	string info(myNetw.connType.c_str());
+	info += "\n\r";
+	info += myNetw.connState.c_str();
+	info += "\n\r";
+	info += myNetw.connTime.c_str();
+	info += "\n\r";
+	info += myNetw.provider.c_str();
+	info += "\n\r";
+	info += myNetw.radioMode.c_str();
+	info += "\n\r";
+	info += myNetw.dbTech.c_str();
+	info += "\n\r";
+	info += myNetw.roamStatus.c_str();
+	info += "\n\r";
+	info += myNetw.sigStrength.c_str();
+	info += "\n\r";
+	info += myNetw.sigLevel.c_str();
+	info += "\n\r";
+	info += myNetw.lte.c_str();
+	info += "\n\r";
+	info += myNetw.wcdma.c_str();
+	info += "\n\r";
+	info += mySystem.ip.c_str();
+	info += "\n\r";
+	info += myNetw.ipv6.c_str();
+	info += "\n\n\r";
+	writetofile(info, "data/MonitorData.txt");
+
 
     }
 

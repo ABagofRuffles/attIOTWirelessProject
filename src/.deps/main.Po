@@ -111,7 +111,32 @@ main.o: main.cpp \
  /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/bits/environments.h \
  /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/bits/confname.h \
  /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/getopt.h \
- wwan_status.hpp
+ wwan_status.hpp \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/fstream \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/istream \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/ios \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/ios_base.h \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/locale_classes.h \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/locale_classes.tcc \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/stdexcept \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/streambuf \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/streambuf.tcc \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/basic_ios.h \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/locale_facets.h \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/cwctype \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/wctype.h \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/arm-oe-linux-gnueabi/bits/ctype_base.h \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/streambuf_iterator.h \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/arm-oe-linux-gnueabi/bits/ctype_inline.h \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/locale_facets.tcc \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/basic_ios.tcc \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/ostream \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/ostream.tcc \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/istream.tcc \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/codecvt.h \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/arm-oe-linux-gnueabi/bits/basic_file.h \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/arm-oe-linux-gnueabi/bits/c++io.h \
+ /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/fstream.tcc
 
 /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/stdc-predef.h:
 
@@ -340,3 +365,53 @@ iot_monitor.h:
 /usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/getopt.h:
 
 wwan_status.hpp:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/fstream:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/istream:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/ios:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/ios_base.h:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/locale_classes.h:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/locale_classes.tcc:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/stdexcept:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/streambuf:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/streambuf.tcc:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/basic_ios.h:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/locale_facets.h:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/cwctype:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/wctype.h:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/arm-oe-linux-gnueabi/bits/ctype_base.h:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/streambuf_iterator.h:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/arm-oe-linux-gnueabi/bits/ctype_inline.h:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/locale_facets.tcc:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/basic_ios.tcc:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/ostream:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/ostream.tcc:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/istream.tcc:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/codecvt.h:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/arm-oe-linux-gnueabi/bits/basic_file.h:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/arm-oe-linux-gnueabi/bits/c++io.h:
+
+/usr/local/oecore-x86_64/sysroots/cortexa7-neon-vfpv4-oe-linux-gnueabi/usr/include/c++/5.3.0/bits/fstream.tcc:
