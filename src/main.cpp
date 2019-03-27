@@ -43,8 +43,8 @@ int main(void) {
         mySystem.model=getModelID(om, sizeof(om));
     while( mySystem.model == "service is not ready");
 
-
-// add while here
+    string temp;
+    for(int  i = 0; i <3; i++) {
     mySystem.firmVer   = getFirmwareVersion(om, sizeof(om));
     mySystem.appsVer   = getAppsVersion(om, sizeof(om));
     mySystem.malwarVer = getMALManVer(om, sizeof(om));
@@ -73,12 +73,12 @@ int main(void) {
     printf("ipv6 %s\n\n", myNetw.ipv6.c_str());
 	
 	//Write data to text file
-	string temp;
-	while(user button == 0){
-		temp = myNetw.connType.c_str() + "\n\r" + myNetw.connState.c_str() + "\n\r" + myNetw.connTime.c_str() + "\n\r" + myNetw.provider.c_str() + "\n\r" + myNetw.radioMode.c_str() + "\n\r" + myNetw.dbTech.c_str() + "\n\r" + myNetw.roamStatus.c_str() + "\n\r" + myNetw.sigStrength.c_str() + "\n\r" + myNetw.sigLevel.c_str() + "\n\r" + myNetw.lte.c_str() + "\n\r" + myNetw.wcdma.c_str() + "\n\r" + mySystem.ip.c_str() + "\n\r" + myNetw.ipv6.c_str();  //lol what return key?!?
-		writetofile(temp, "Data/MonitorData");
+
+    temp = myNetw.connType.c_str() + "\n\r" + myNetw.connState.c_str() + "\n\r" + myNetw.connTime.c_str() + "\n\r" +       myNetw.provider.c_str() + "\n\r" + myNetw.radioMode.c_str() + "\n\r" + myNetw.dbTech.c_str() + "\n\r" + myNetw.roamStatus.c_str() + "\n\r" + myNetw.sigStrength.c_str() + "\n\r" + myNetw.sigLevel.c_str() + "\n\r" + myNetw.lte.c_str() + "\n\r" + myNetw.wcdma.c_str() + "\n\r" + mySystem.ip.c_str() + "\n\r" + myNetw.ipv6.c_str();  //lol what return key?!?
+		writetofile(temp, "data/MonitorData.txt");
 	}
-	
+    }
+
     return 0;
 }
 
